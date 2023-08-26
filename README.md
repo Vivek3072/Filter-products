@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+## Project Live URL - [Visit Website](https://fake-store-products-filter.netlify.app/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
