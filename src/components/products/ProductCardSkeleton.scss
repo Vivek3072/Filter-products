@@ -1,0 +1,34 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.product-card-skeleton {
+
+  .image {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: $skeleton-background;
+    height: 24rem;
+  }
+
+  p {
+    height: 1rem;
+    width: 100%;
+    background-color: $skeleton-background;
+    border-radius: 1rem;
+  }
+
+  .title_1 {
+    width: 90%;
+  }
+
+  .title_2 {
+    width: 70%;
+  }
+  .price {
+    width: 80%;
+  }
+
+  .stars {
+    width: 50%;
+  }
+}

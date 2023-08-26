@@ -1,0 +1,46 @@
+.filter-panel {
+  width: full;
+  padding: 2rem 3rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 780px) {
+  .filter-panel {
+    width: 100%;
+    padding: 5px 2rem;
+  }
+}
+
+.filter-panel-item {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(214, 214, 214);
+  .item_tile {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: large;
+    font-weight: 400;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0.3rem;
+  }
+
+  .item_content {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+  }
+
+  .item_content.collapsed {
+    max-height: 0px;
+    display: none;
+  }
+}

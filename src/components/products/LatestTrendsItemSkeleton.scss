@@ -1,0 +1,25 @@
+@import "../../styles/Variables.scss";
+
+.latest-trends-item-skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: start;
+  margin-right: 1rem;
+  text-decoration: none !important;
+
+  .image-placeholder {
+    width: 13rem;
+    height: 18rem;
+    background-color: $skeleton-background;
+    border-radius: 1rem;
+  }
+
+  .title-placeholder {
+    background-color: $skeleton-background;
+    height: 1rem;
+    width: 10rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+  }
+}

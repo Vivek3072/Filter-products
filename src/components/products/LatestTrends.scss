@@ -1,0 +1,89 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.latest-trends_wrapper {
+  background-color: #fff;
+  ::-webkit-scrollbar {
+    visibility: hidden;
+  }
+
+  ::-webkit-scrollbar-track {
+    visibility: hidden;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: x-large;
+  }
+}
+
+.latest-trends_list {
+  display: flex;
+  justify-items: start;
+  align-items: flex-start;
+  overflow-x: auto;
+  background-color: none;
+}
+
+.latest-trends-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: start;
+  margin-right: 1rem;
+  text-decoration: none !important;
+  transition-duration: 300ms;
+  transition-property: all;
+  margin: 10px;
+
+  img:hover{
+    transition: all 1s ease-in-out;
+    transform: scale(1.2);
+  }
+  div {
+    position: relative;
+    width: 13rem;
+    height: 18rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  div img {
+    height: 100%;
+  }
+
+  p {
+    color: $light-font-color;
+    width: 12rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sheet {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: linear-gradient(to bottom, #87cfeb9a, #4169e198);
+    height: fit-content;
+  }
+
+  .sheet_icon {
+    font-size: x-large;
+    color: white;
+  }
+
+  div:hover .sheet {
+    opacity: 100%;
+  }
+}

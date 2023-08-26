@@ -1,0 +1,162 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.product-card {
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
+
+  .image-wrapper {
+    position: relative;
+    bottom: -1rem;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+    border: 1px solid rgb(214, 214, 214);
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .image_div {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .image {
+    width: 100%;
+  }
+
+  .image:hover {
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
+  }
+
+  .sheet {
+    position: absolute;
+    background: linear-gradient(to bottom, #87cfeb9a, #4169e198);
+    width: 100%;
+    padding: 0.5rem;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .sheet_content {
+      color: white;
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+
+  .title {
+    padding: 0;
+    margin: 0.5rem 0;
+    color: $base-font-color;
+    width: 100%;
+    line-height: 1rem;
+    height: 2rem;
+    font-size: small;
+    overflow: hidden;
+    font-weight: 400;
+  }
+
+  .price-wrapper {
+    display: flex;
+  }
+
+  .price {
+    padding: 0;
+    margin: 0 0.2rem;
+    color: #4395f5;
+    font-weight: 500;
+    font-size: large;
+  }
+
+  .previous-price {
+    padding: 0;
+    margin: 0 0;
+    color: $light-font-color;
+    font-weight: 300;
+    text-decoration: line-through;
+    font-size: large;
+  }
+
+  .rating-wrapper {
+    display: flex;
+    span {
+      margin-left: 0.3rem;
+      margin-top: 0.5rem;
+      color: $light-font-color;
+    }
+  }
+
+  .like-button {
+    position: absolute;
+    top: 0rem;
+    right: 0.5rem;
+    border: none;
+    z-index: 10;
+    height: 2rem;
+    background: none;
+    color: $xlight-font-color;
+    opacity: 0.4;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bounce {
+    animation: bounce 0.5s ease;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  .liked {
+    opacity: 1;
+    color: red;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.product-card:hover .sheet {
+  display: flex;
+}
+
+@media ((min-width: 300px) and (max-width:780px)) {
+  .product-card .image_div {
+    height: 200px;
+  }
+  .image {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-card {
+    .image-wrapper {
+      height: fit-content;
+    }
+
+    .title {
+      line-height: 1.5rem;
+      height: 3rem;
+      font-size: medium;
+    }
+
+    .previous-price {
+      font-size: 1rem;
+    }
+  }
+}
