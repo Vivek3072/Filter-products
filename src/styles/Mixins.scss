@@ -5,8 +5,32 @@
   height: 100%;
 }
 
-@mixin glass-morphism {
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
-  border: 1px solid $glass-border-color;
+@mixin flex-center-class {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-align-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flex-justify-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flex-justify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-both-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }

@@ -1,6 +1,8 @@
-// lenghts
-$max-w: 72rem;
-$xl: 10rem;
+//screen-sizes
+$smallest: 200px;
+$large-mobile: 600px;
+$tablet: 780px;
+$desktop: 1100px;
 
 // font sizes
 $xxx-large: 3rem;
@@ -9,8 +11,6 @@ $xxx-large: 3rem;
 $base-font-color: rgb(53, 53, 53);
 $light-font-color: rgba(39, 39, 39, 0.7);
 $xlight-font-color: rgba(39, 39, 39, 0.5);
-$glass-border-color: rgba(39, 39, 39, 0.18);
-$sheet-color: rgba(89, 0, 255, 0.432);
 $blue-primary: #4395f5;
 $star-color: #eeaa22;
 $skeleton-background: rgba(128, 128, 128, 0.253);
