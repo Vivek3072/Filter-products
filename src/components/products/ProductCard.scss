@@ -11,9 +11,7 @@
     bottom: -1rem;
     width: 100%;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-class;
     border-radius: 0.2rem;
     border: 1px solid rgb(214, 214, 214);
     overflow: hidden;
@@ -41,9 +39,9 @@
     padding: 0.5rem;
     bottom: 0;
     display: none;
-    justify-content: center;
-    align-items: center;
     .sheet_content {
+      width: 100%;
+      text-align: center;
       color: white;
       padding: 0;
       margin: 0;
@@ -64,7 +62,7 @@
   }
 
   .price-wrapper {
-    display: flex;
+    @include flex-justify-start;
   }
 
   .price {
@@ -85,7 +83,7 @@
   }
 
   .rating-wrapper {
-    display: flex;
+    @include flex-justify-start;
     span {
       margin-left: 0.3rem;
       margin-top: 0.5rem;
@@ -105,9 +103,7 @@
     opacity: 0.4;
     font-size: 2rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center-class;
   }
   .bounce {
     animation: bounce 0.5s ease;
@@ -134,7 +130,7 @@
   display: flex;
 }
 
-@media ((min-width: 300px) and (max-width:780px)) {
+@media (min-width: $smallest) and (max-width: $tablet) {
   .product-card .image_div {
     height: 200px;
   }
@@ -143,7 +139,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $desktop) {
   .product-card {
     .image-wrapper {
       height: fit-content;

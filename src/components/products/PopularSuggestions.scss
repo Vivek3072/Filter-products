@@ -1,9 +1,9 @@
 @import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
 
 .popular-suggestions {
-  display: flex;
+  @include flex-align-start;
   flex-direction: column;
-  align-items: flex-start;
 
   a {
     text-decoration: none;

@@ -1,5 +1,4 @@
 @import "../../styles/Variables.scss";
-@import "../../styles/Mixins.scss";
 
 .product-card-skeleton {
   width: 100%;
@@ -34,7 +33,7 @@
   }
 }
 
-@media (min-width: 300px) and (max-width: 600px) {
+@media (min-width: $smallest) and (max-width: $large-mobile) {
   .product-card-skeleton {
     gap: 1rem;
     padding: 2px;
@@ -46,7 +45,7 @@
     height: 150px;
   }
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: $large-mobile) and (max-width: $tablet) {
   .product-card-skeleton {
     gap: 1rem;
     padding: 5px;

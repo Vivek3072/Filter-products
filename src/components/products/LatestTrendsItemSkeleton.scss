@@ -1,10 +1,9 @@
 @import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
 
 .latest-trends-item-skeleton {
-  display: flex;
+  @include flex-both-start;
   flex-direction: column;
-  align-items: flex-start;
-  justify-items: flex-start;
   margin-right: 1rem;
   text-decoration: none !important;
 

@@ -2,21 +2,20 @@
 @import "../../styles/Mixins.scss";
 
 .big_search_wrapper {
-  width: 90%;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  @include flex-center-class;
   border-radius: 1rem;
   margin: auto;
   background-color: #fff;
   box-shadow: 0px 2px 5px 5px #cdcdcd7d;
 }
 
-.big_search_wrapper input[type="text"]{
+.big_search_wrapper input[type="text"] {
   width: 100%;
 }
 
 .big_search_input {
-  width: 80%;
+  width: 100%;
   font-size: large;
   padding: 1rem 1.5rem;
   border: none;
@@ -33,7 +32,7 @@
 }
 
 .search_helper_wrapper {
-  width: 90%;
+  width: 100%;
   margin: auto;
   box-shadow: 0px 5px 15px 2px #a3a3a37d;
   margin-top: 2rem;

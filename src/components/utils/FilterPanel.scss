@@ -1,10 +1,13 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
 .filter-panel {
-  width: full;
+  // width: full;
   padding: 2rem 3rem;
   margin-right: 1rem;
 }
 
-@media (max-width: 780px) {
+@media (max-width: $tablet) {
   .filter-panel {
     width: 100%;
     padding: 5px 2rem;
@@ -23,9 +26,9 @@
     outline: none;
     font-size: large;
     font-weight: 400;
-    display: flex;
     cursor: pointer;
-    justify-content: space-between;
+    display: flex;
+    @include flex-justify-between;
     align-items: center;
     padding: 0;
     margin-bottom: 0.3rem;

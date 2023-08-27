@@ -3,18 +3,15 @@
 
 .search_results {
   width: 100%;
-  display: flex;
+  @include flex-align-start;
   flex-direction: column;
-  align-items: flex-start;
 
   .panel_wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    @include flex-both-start;
     flex-direction: column;
   }
 
-  @media (min-width: 780px) {
+  @media (min-width: $tablet) {
     .panel_wrapper {
       flex-direction: row;
     }
@@ -23,8 +20,7 @@
 
 .search-navbar {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include flex-center-class;
   z-index: 1;
   background-color: white;
 }
@@ -38,12 +34,11 @@
   width: 60%;
   margin: auto;
   position: relative;
-  display: flex;
-  align-items: center;
+  @include flex-center-class;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 1rem;
 }
-@media (max-width:600px) {
+@media (max-width: $large-mobile) {
   .search_wrapper {
     width: 90%;
   }
