@@ -3,11 +3,17 @@ import { Products } from "../../api/interfaces/Products";
 import "./ProductCard.scss";
 import Stars from "../utils/Stars";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import ProductModal from "./ProductModal";
 
 interface Product { product: Products }
 
 const ProductCard: React.FC<Product> = ({ product }) => {
   const [isBouncing, setIsBouncing] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   const [liked, setLiked] = useState<boolean>(false);
   const toggleLike = () => {
@@ -34,7 +40,7 @@ const ProductCard: React.FC<Product> = ({ product }) => {
             <img className="image" src={product.image} alt="" />
           </div>
           <div className="sheet">
-            <p className="sheet_content">View Product</p>
+            <div className="sheet_content" onClick={() => toggleModal()}>View Product</div>
           </div>
         </div>
         <div className="detail-wrapper">
@@ -46,13 +52,20 @@ const ProductCard: React.FC<Product> = ({ product }) => {
             <p className="price">{"Rs." + product.price}</p>
           </div>
           <div className="rating-wrapper">
-            <Stars rating={product.rating as any}  isSelected={false} />
+            <Stars rating={product.rating as any} isSelected={false} />
             <span className="ratings-count">
               {"(" + product.ratingCount + ")"}
             </span>
           </div>
         </div>
       </div>
+      {isModalOpen &&
+        <ProductModal
+          isModalOpen={isModalOpen}
+          handleModal={toggleModal}
+          product={product}
+        />
+      }
     </>
   );
 };
