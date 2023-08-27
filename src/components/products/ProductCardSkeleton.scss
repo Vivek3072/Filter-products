@@ -2,12 +2,14 @@
 @import "../../styles/Mixins.scss";
 
 .product-card-skeleton {
+  width: 100%;
+  display: grid;
 
   .image {
-    width: 100%;
+    width: 260px;
     border-radius: 1rem;
     background-color: $skeleton-background;
-    height: 24rem;
+    height: 300px;
   }
 
   p {
@@ -18,17 +20,40 @@
   }
 
   .title_1 {
+    margin-top: 10px;
     width: 90%;
   }
 
-  .title_2 {
-    width: 70%;
-  }
   .price {
+    margin-top: 0.1rem;
     width: 80%;
   }
 
   .stars {
     width: 50%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .product-card-skeleton {
+    gap: 1rem;
+    padding: 2px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-card-skeleton .image {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .product-card-skeleton {
+    gap: 1rem;
+    padding: 5px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .product-card-skeleton .image {
+    width: 200px;
+    height: 200px;
   }
 }
